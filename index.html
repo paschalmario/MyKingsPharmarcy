@@ -5,6 +5,7 @@
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,28 +15,10 @@
 </head>
 <body>
   <script>
-    class Drink{
-      constructor(name) {
-        this.brand = name
-      }
-      
-      present(){
-        return `The brand name is ` + this.brand
-      }
-   
-    }
+    const vehicles =['mustang', 'f-50', 'expedition'];
+    const [car, , suv] = vehicles
 
-    class flavour extends Drink{
-      constructor(name, flav){
-        super(name);
-        this.flav = flav
-      }
-      show() {
-        return this.present() + `, with a flovour of `+ this.flav
-      }
-    }
-     const myDrink = new flavour('Nestle', 'chocolate')
-      document.write(myDrink.show())
+    document.write(suv)
   </script>
 </body>
 </html>
