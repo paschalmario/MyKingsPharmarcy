@@ -1,13 +1,41 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-react-app</title>
-  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Drink{
+      constructor(name) {
+        this.brand = name
+      }
+      
+      present(){
+        return `The brand name is ` + this.brand
+      }
+   
+    }
+
+    class flavour extends Drink{
+      constructor(name, flav){
+        super(name);
+        this.flav = flav
+      }
+      show() {
+        return this.present() + `, with a flovour of `+ this.flav
+      }
+    }
+     const myDrink = new flavour('Nestle', 'chocolate')
+      document.write(myDrink.show())
+  </script>
+</body>
 </html>
